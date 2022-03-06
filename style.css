@@ -278,37 +278,44 @@ transition: all 1s linear;
     height:100px;
     background-color: #fcd232;
 }
- 
+
 .checkboxes {
     width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   align-items: center;
+    align-items: center;
     text-align: left;
     color: white;
     background-color: black;
-   margin: 0%;
-  
+    margin: 0%;
     font-size: 20px;
    
 }
 
+
+
+
+ 
+
+
 .chbxmarketing,
 .chbxcoding,
-.chbxdesign {
-  
-    
+.chbxdesign {   
     border: 3px solid red;
     border-left: none;
     margin: 0;
     padding: 1.3rem;
     width: 100%;
-    height: 100px;
-    
+    height: 100px; 
+}
 
-   
+.chbxmarketing.active,
+.chbxcoding.active,
+.chbxdesign.active  {
+  background-color: red; 
+  color: black;
 }
 
 .chbxmarketing {
@@ -344,10 +351,10 @@ transition: all 1s linear;
     position: relative;
     top: 0;
     left: 0;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
-
+.header-hire h1,
 .projects h2 {
     text-align: center;
     font-size: 50px;
@@ -357,7 +364,7 @@ transition: all 1s linear;
     cursor: pointer;
    
 }
-
+.header-hire h1:hover ,
 .projects h2:hover {
     color: red;
     transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -518,9 +525,6 @@ transition: all 1s linear;
      margin-bottom: 0;
      display: flex;
      justify-content: center;
-     
-     
-
  }
 
  .fa-heart  {
@@ -530,7 +534,237 @@ transition: all 1s linear;
 /* ______________ footer ends ____  */
 
 
+ /* ______________ hire ________________  */
+
+
+
+ 
+   .form-container {
+       width: 100%;
+       padding-left: 15px;
+       padding-right: 15px;
+       margin-left: auto;
+       margin-right: auto;
+       height: 100vh;
+       
+   }
+
+   form { 
+       display: flex;
+       flex-wrap: wrap;
+       flex-basis: 50%;
+       justify-content: center;
+       flex-direction: row;
+   }
+
+   .form-row {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       flex-wrap: wrap;
+       align-items: center;
+
+
+   }
+
+   .form-group {
+       display: flex;
+       flex-direction: column;
+       padding-right: 15px;
+       
+       
+
+   }
+
+   .label-select {
+       display: flex;
+       flex-direction: column;
+   }
+
+   .label-class {
+       font-size: 20px;
+       font-weight: 700;
+       text-align: left;
+       padding-bottom: 15px;
+       padding-top: 15px;
+
+   }
+
+   .form-control {
+       font-style: italic;
+       font-size: 18px;
+       height: 50px;
+       width: 500px;
+       max-width: 100%;
+       padding-top: 10px;
+       margin-top: 10px;
+   }
+
+   .students-type {
+       display: flex;
+       flex-direction: row;
+       flex-basis: 50%;
+       justify-content: center;
+      
+
+   }
+
+   .select-cont #choose-one {
+    height: 50px;
+    width: 500px;
+    max-width: 100%;
+    padding-top: 10px;
+    margin-top: 10px;
+   }
+
+   .students-type .send {
+       display: flex;
+       flex-direction: column;
+   }
+
+   .students-type .send .btn {
+       height: 50px;
+       width: 500px;
+       height: 50px;
+       max-width: 100%;
+       padding-top: 10px;
+       margin-top: 10px;
+   }
+
+   .send .invisible {
+       visibility: hidden !important;
+   }
+
+   .select-cont, .send {
+       padding-right: 15px;
+       /* margin-right: 15px; */
+   }
+
+   .label-select {
+       font-size: 20px;
+       font-weight: 700;
+   }
+
+  .send input {
+      background-color: red;
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer !important;
+  }
+
+  .send input:hover {
+    color: red;
+    background-color: white;
+    transition:  0.8s linear;
+    border: 3px solid red;
+  }
+
+  .label-select #choose-one {
+      font-style: italic;
+      color: black;
+      font-weight: 700;
+      font-size: 20px;
+  }
+
+  
+
+
+
+ 
+
+
 /* ______ media ___________  */
 
 
-  
+@media only screen and (max-width: 1315px) {
+    .cards-inner {
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .container{
+        height: 100%;
+    }
+    .navbar ul{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 976px) {
+    .checkboxes {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .chbxcontainer {
+        height:100%;
+    }
+    .checkboxes {
+        display:block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: 0%;
+        font-size: 20px;
+    }
+    .slider h1 {
+        font-size: 100px;
+        left: 3%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .slider h1 {
+        font-size: 80px;
+        left: 3%;
+    }
+    .logo {
+        display: block;
+        width: 100%;
+    }
+    .logo a {
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+    }
+    .logo img {
+        position: inherit;
+        display: block;
+        margin: 0 auto;
+    }
+    .logo figcaption{
+        position: inherit;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+    .navbar ul{
+        padding-left: 0px;
+        width: 100%;
+    }
+    .navbar ul a{
+        padding-left:0px;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .button button {
+        display: block;
+        position: inherit;
+        margin: 0 auto;
+    }
+}
+
